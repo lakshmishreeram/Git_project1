@@ -6,12 +6,13 @@ public class Sample_program2
 {
 	public static void main(String[] args)
 	{
-		int i=100;
+//		int i=100;
 		int mark;
 		System.out.println("ENTER YOUR MARK:");
-		Scanner ob = new Scanner(System.in);
-		mark = ob.nextInt();
-		if(mark<=100)
+		try (Scanner ob = new Scanner(System.in)) {
+			mark = ob.nextInt();
+		}
+		if (mark == 100 || mark <=90) 
 		{
 			System.out.println("YOUR MARK IS VALID");
 		}
